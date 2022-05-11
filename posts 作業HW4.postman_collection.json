@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "7c872e35-ce8e-4446-b0c4-40eb2b0cb908",
+		"name": "postslist 作業HW4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "查詢全部",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mighty-ravine-79895.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"mighty-ravine-79895",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增資料",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"user\": \"627bcb7c34c3dced88711513\",\r\n\"userPhoto\": \"https://cdn2.ettoday.net/images/3637/d3637763.jpg\",\r\n\"image\": \"https://tw.portal-pokemon.com/anime/series/s5/img/XY_main_JP.jpg\",\r\n\"content\": \"我要成為寶可夢大師\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mighty-ravine-79895.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"mighty-ravine-79895",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查詢-排序-篩選",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mighty-ravine-79895.herokuapp.com/posts?timeSort=desc&q=海",
+					"protocol": "https",
+					"host": [
+						"mighty-ravine-79895",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					],
+					"query": [
+						{
+							"key": "timeSort",
+							"value": "desc"
+						},
+						{
+							"key": "q",
+							"value": "海"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
